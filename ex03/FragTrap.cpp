@@ -2,7 +2,27 @@
 
 FragTrap::FragTrap()
 {
+	std::cout << "FragTrap Default constructor called\n";
+}
 
+FragTrap::FragTrap(const FragTrap &obj)
+{
+	std::cout << "Copy constructor called\n";
+	*this = obj;
+	return ;
+}
+
+FragTrap &FragTrap::operator=(const FragTrap &obj)
+{
+	std::cout << "Copy assignment operator called\n";
+	if (this != &obj)
+	{
+		this->_name = obj._name;
+		this->_hitPoints = obj._hitPoints;
+		this->_energyPoints = obj._energyPoints;
+		this->_attaqueDamage = obj._attaqueDamage;
+	}
+	return *this;
 }
 
 FragTrap::FragTrap(std::string str) : ClapTrap(str)

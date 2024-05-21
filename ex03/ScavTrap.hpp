@@ -4,12 +4,14 @@
 # include "ClapTrap.hpp"
 # include <string>
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 	private:
 		ScavTrap();
 	public:
 		ScavTrap(std::string str);
+		ScavTrap(const ScavTrap &obj);
+		ScavTrap &operator=(const ScavTrap &obj);
 		~ScavTrap();
 		void attack(const std::string& target);
 		void guardGate();
