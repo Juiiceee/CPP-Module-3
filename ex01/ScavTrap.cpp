@@ -2,7 +2,7 @@
 
 ScavTrap::ScavTrap()
 {
-
+	std::cout << "ScavTrap Default constructor called\n";
 }
 
 ScavTrap::ScavTrap(std::string str) : ClapTrap(str)
@@ -21,6 +21,26 @@ ScavTrap::~ScavTrap()
 void	ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode\n";
+}
+
+ScavTrap::ScavTrap(const ScavTrap &obj)
+{
+	std::cout << "Copy constructor called\n";
+	*this = obj;
+	return ;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap &obj)
+{
+	std::cout << "Copy assignment operator called\n";
+	if (this != &obj)
+	{
+		this->_name = obj._name;
+		this->_hitPoints = obj._hitPoints;
+		this->_energyPoints = obj._energyPoints;
+		this->_attaqueDamage = obj._attaqueDamage;
+	}
+	return *this;
 }
 
 void ScavTrap::attack(const std::string& target)
