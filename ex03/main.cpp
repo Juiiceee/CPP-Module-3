@@ -8,7 +8,6 @@
 int main()
 {
 	DiamondTrap dia("oui");
-	std::cout << "oui";
 	// ClapTrap Clapi("Clapi");
 	// ScavTrap Clapo("Clapo");
 	// FragTrap Clapa("Clapa");

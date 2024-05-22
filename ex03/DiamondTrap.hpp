@@ -9,8 +9,8 @@ class DiamondTrap : public FragTrap, public ScavTrap
 {
 	private:
 		std::string name;
-		DiamondTrap();
 	public:
+		DiamondTrap();
 		DiamondTrap(std::string str);
 		DiamondTrap(const DiamondTrap &obj);
 		DiamondTrap &operator=(const DiamondTrap &obj);

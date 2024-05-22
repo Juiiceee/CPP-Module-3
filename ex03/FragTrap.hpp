@@ -7,8 +7,8 @@
 class FragTrap : virtual public ClapTrap
 {
 	private:
-		FragTrap();
 	public:
+		FragTrap();
 		~FragTrap();
 		FragTrap(const FragTrap &obj);
 		FragTrap &operator=(const FragTrap &obj);
