@@ -37,7 +37,7 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string& target)
 {
-		if (this->_hitPoints <= 0)
+	if (this->_hitPoints <= 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " doesn't have enough hit points\n";
 		return ;
@@ -54,13 +54,21 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
+	if (this->_hitPoints <= 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " doesn't have enough hit points\n";
+		return ;
+	}
 	std::cout << "ClapTrap " << this->_name << " receive a damage causing " << amount << " points of damage!\n";
-	this->_hitPoints -= amount;
+	if (amount >= this->_hitPoints)
+		this->_hitPoints = 0;
+	else
+		this->_hitPoints -= amount;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-		if (this->_hitPoints <= 0)
+	if (this->_hitPoints <= 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " doesn't have enough hit points\n";
 	}

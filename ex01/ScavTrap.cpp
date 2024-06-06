@@ -48,7 +48,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &obj)
 
 void ScavTrap::attack(const std::string& target)
 {
-		if (this->_hitPoints <= 0)
+	if (this->_hitPoints <= 0)
 	{
 		std::cout << "ScavTrap " << this->_name << " doesn't have enough hit points\n";
 		return ;

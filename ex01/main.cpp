@@ -15,8 +15,9 @@ int main()
 		Clapi.takeDamage(1);
 	Clapi.attack("Clapo");
 	Clapo.attack("Clapi");
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 9; i++)
 		Clapo.takeDamage(10);
+	Clapo.takeDamage(12);
 	Clapo.attack("Clapi");
 	Clapi.beRepaired(10);
 	Clapi.attack("Clapo");
