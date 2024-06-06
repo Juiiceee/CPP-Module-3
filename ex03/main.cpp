@@ -8,7 +8,11 @@
 int main()
 {
 	DiamondTrap dia("oui");
+	ClapTrap dio("oui");
+	ScavTrap dip("oui");
+	FragTrap dif("oui");
 	dia.whoAmI();
+	dia.attack("salut");
 	// ClapTrap Clapi("Clapi");
 	// ScavTrap Clapo("Clapo");
 	// FragTrap Clapa("Clapa");

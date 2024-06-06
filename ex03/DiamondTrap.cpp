@@ -5,7 +5,7 @@ DiamondTrap::DiamondTrap() : ClapTrap()
 	std::cout << "Default DiamondTrap constructor called\n";
 	FragTrap::_hitPoints = 100;
 	ScavTrap::_energyPoints = 50;
-	FragTrap::_attaqueDamage = 30;
+	FragTrap::_attackDamage = 30;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &obj)
@@ -22,7 +22,7 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap &obj)
 		this->_name = obj._name;
 		this->_hitPoints = obj._hitPoints;
 		this->_energyPoints = obj._energyPoints;
-		this->_attaqueDamage = obj._attaqueDamage;
+		this->_attackDamage = obj._attackDamage;
 	}
 	return *this;
 }
@@ -35,7 +35,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name), Sca
 
 	FragTrap::_hitPoints = 100;
 	ScavTrap::_energyPoints = 50;
-	FragTrap::_attaqueDamage = 30;
+	FragTrap::_attackDamage = 30;
 }
 
 DiamondTrap::~DiamondTrap()

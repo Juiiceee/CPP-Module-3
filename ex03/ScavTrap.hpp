@@ -6,9 +6,9 @@
 
 class ScavTrap : virtual public ClapTrap
 {
-	private:
-	public:
+	protected:
 		ScavTrap();
+	public:
 		ScavTrap(std::string str);
 		ScavTrap(const ScavTrap &obj);
 		ScavTrap &operator=(const ScavTrap &obj);

@@ -6,7 +6,7 @@
 #    By: lbehr <lbehr@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/20 12:22:14 by lbehr             #+#    #+#              #
-#    Updated: 2024/05/18 11:21:10 by lbehr            ###   ########.fr        #
+#    Updated: 2024/06/06 12:52:45 by lbehr            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRCS	:= ClapTrap.cpp DiamondTrap.cpp FragTrap.cpp main.cpp ScavTrap.cpp
 OBJS	:= $(SRCS:%.cpp=$(OBJ_DIR)/%.o)
 DEPS	:= $(OBJS:.o=.d)
 CC		:= c++
-CFLAGS	:= -Wall -Werror -Wextra -std=c++98 -g3
+CFLAGS	:= -Wall -Werror -Wextra -std=c++98 -g3 -Wshadow -Wno-shadow
 RM		:= rm -rf
 DIR_DUP	= mkdir -p $(@D)
 

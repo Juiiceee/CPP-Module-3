@@ -6,9 +6,9 @@
 
 class FragTrap : virtual public ClapTrap
 {
-	private:
-	public:
+	protected:
 		FragTrap();
+	public:
 		~FragTrap();
 		FragTrap(const FragTrap &obj);
 		FragTrap &operator=(const FragTrap &obj);
