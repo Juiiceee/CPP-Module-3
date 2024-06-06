@@ -5,7 +5,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 	std::cout << "ScavTrap Default constructor called\n";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
-	this->_attaqueDamage = 20;
+	this->_attackDamage = 20;
 }
 
 ScavTrap::ScavTrap(std::string str) : ClapTrap(str)
@@ -13,7 +13,7 @@ ScavTrap::ScavTrap(std::string str) : ClapTrap(str)
 	std::cout << "ScavTrap constructor called\n";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
-	this->_attaqueDamage = 20;
+	this->_attackDamage = 20;
 }
 
 ScavTrap::~ScavTrap()
@@ -41,19 +41,24 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &obj)
 		this->_name = obj._name;
 		this->_hitPoints = obj._hitPoints;
 		this->_energyPoints = obj._energyPoints;
-		this->_attaqueDamage = obj._attaqueDamage;
+		this->_attackDamage = obj._attackDamage;
 	}
 	return *this;
 }
 
 void ScavTrap::attack(const std::string& target)
 {
-	if (this->_energyPoints <= 0)
+		if (this->_hitPoints <= 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " doesn't have enough hit points\n";
+		return ;
+	}
+	else if (this->_energyPoints <= 0)
 	{
 		std::cout << "ScavTrap " << this->_name << " doesn't have enough energy point\n";
 		return ;
 	}
-	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attaqueDamage << " points of damage!\n";
+	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!\n";
 	this->_energyPoints--;
 	return;
 }
